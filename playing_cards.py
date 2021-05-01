@@ -37,6 +37,18 @@ class Playing_Cards:
         return card_drawn
 
     @staticmethod
+    def draw_cards(cards, qty):
+        if qty < len(cards):
+            cards_drawn = []
+            for card in range(qty):
+                cards_drawn.append(random.choice(cards))
+                cards.remove(cards_drawn[card])
+            return cards_drawn
+        else:
+            print('Draw Card Error. Not enough cards to draw.')
+
+
+    @staticmethod
     def print_deck(cards):
         print(len(cards), cards)
 
@@ -64,3 +76,9 @@ class Playing_Cards:
 # Playing_Cards.discard(shuffled_deck)
 #
 # Playing_Cards.print_deck(shuffled_deck)
+
+# my_hand = Playing_Cards.draw_cards(shuffled_deck, 55)
+#
+# Playing_Cards.print_deck(shuffled_deck)
+#
+# print(my_hand)
