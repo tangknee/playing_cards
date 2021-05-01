@@ -49,7 +49,7 @@ class Playing_Cards:
 
 
     @staticmethod
-    def print_deck(cards):
+    def print_cards(cards):
         print(len(cards), cards)
 
     @staticmethod
