@@ -40,6 +40,11 @@ class Playing_Cards:
     def print_deck(cards):
         print(len(cards), cards)
 
+    @staticmethod
+    def discard(cards):
+        #discards random card from the deck - user is unaware of discarded card
+        cards.remove(random.choice(cards))
+
 
 
 
@@ -50,8 +55,12 @@ Playing_Cards.print_deck(game_deck)
 shuffled_deck = Playing_Cards.shuffle_cards(game_deck)
 
 Playing_Cards.print_deck(shuffled_deck)
+#
+# card = Playing_Cards.draw_card(shuffled_deck)
+#
+# print(card)
+# Playing_Cards.print_deck(shuffled_deck)
 
-card = Playing_Cards.draw_card(shuffled_deck)
+Playing_Cards.discard(shuffled_deck)
 
-print(card)
 Playing_Cards.print_deck(shuffled_deck)
