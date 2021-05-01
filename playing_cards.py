@@ -48,19 +48,19 @@ class Playing_Cards:
 
 
 
-game_deck = Playing_Cards.create_deck()
-
-Playing_Cards.print_deck(game_deck)
-
-shuffled_deck = Playing_Cards.shuffle_cards(game_deck)
-
-Playing_Cards.print_deck(shuffled_deck)
+# game_deck = Playing_Cards.create_deck()
+#
+# Playing_Cards.print_deck(game_deck)
+#
+# shuffled_deck = Playing_Cards.shuffle_cards(game_deck)
+#
+# Playing_Cards.print_deck(shuffled_deck)
 #
 # card = Playing_Cards.draw_card(shuffled_deck)
 #
 # print(card)
 # Playing_Cards.print_deck(shuffled_deck)
-
-Playing_Cards.discard(shuffled_deck)
-
-Playing_Cards.print_deck(shuffled_deck)
+#
+# Playing_Cards.discard(shuffled_deck)
+#
+# Playing_Cards.print_deck(shuffled_deck)
