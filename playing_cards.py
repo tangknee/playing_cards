@@ -30,11 +30,23 @@ class Playing_Cards:
         random.shuffle(shuffled_cards)
         return shuffled_cards
 
+    @staticmethod
+    def draw_card(cards):
+        card_drawn = random.choice(cards)
+        cards.remove(card_drawn)
+        return card_drawn
+
+
+
 
 my_deck = Playing_Cards.create_deck()
-
-print(my_deck)
-
+#
+# print(my_deck)
+#
 new_deck = Playing_Cards.shuffle_cards(my_deck)
+#
+# print(new_deck)
+print(len(new_deck))
 
-print(new_deck)
+
+print(len(new_deck))
