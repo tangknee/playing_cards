@@ -1,6 +1,8 @@
 #python3
 #playing-cards
 
+import random
+
 class Playing_Cards:
 
     def __init__(self):
@@ -8,7 +10,8 @@ class Playing_Cards:
 
     @staticmethod
     def create_deck():
-        deck = [
+        #tuple
+        deck = (
         'AC', '2C', '3C', '4C', '5C', '6C',
         '7C', '8C', '9C', '10C', 'JC', 'QC', 'KC',
         'AD', '2D', '3D', '4D', '5D', '6D',
@@ -17,5 +20,21 @@ class Playing_Cards:
         '7H', '8H', '9H', '10H', 'JH', 'QH', 'KH',
         'AS', '2S', '3S', '4S', '5S', '6S',
         '7S', '8S', '9S', '10S', 'JS', 'QS', 'KS'
-        ]
+        )
+
         return deck
+
+    @staticmethod
+    def shuffle_cards(cards):
+        shuffled_cards = list(cards)
+        random.shuffle(shuffled_cards)
+        return shuffled_cards
+
+
+my_deck = Playing_Cards.create_deck()
+
+print(my_deck)
+
+new_deck = Playing_Cards.shuffle_cards(my_deck)
+
+print(new_deck)
