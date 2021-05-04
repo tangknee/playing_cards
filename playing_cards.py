@@ -1,17 +1,14 @@
 #python3
 #playing-cards
 
-import random
-
 class Playing_Cards:
 
-    def __init__(self):
-        pass
+    def __init__(self, deck_name):
+        self.deck_name = deck_name
 
-    @staticmethod
     def create_deck():
         #tuple
-        deck = (
+        deck_name = (
         'AC', '2C', '3C', '4C', '5C', '6C',
         '7C', '8C', '9C', '10C', 'JC', 'QC', 'KC',
         'AD', '2D', '3D', '4D', '5D', '6D',
@@ -22,22 +19,25 @@ class Playing_Cards:
         '7S', '8S', '9S', '10S', 'JS', 'QS', 'KS'
         )
 
-        return deck
+        return deck_name
 
     @staticmethod
     def shuffle_cards(cards):
+        import random
         shuffled_cards = list(cards)
         random.shuffle(shuffled_cards)
         return shuffled_cards
 
     @staticmethod
     def draw_card(cards):
+        import random
         card_drawn = random.choice(cards)
         cards.remove(card_drawn)
         return card_drawn
 
     @staticmethod
     def draw_cards(cards, qty):
+        import random
         if qty < len(cards):
             cards_drawn = []
             for card in range(qty):
@@ -50,7 +50,7 @@ class Playing_Cards:
 
     @staticmethod
     def print_cards(cards):
-        print(len(cards), cards)
+        print(len(cards), sorted(cards))
 
     @staticmethod
     def discard(cards):
@@ -59,18 +59,44 @@ class Playing_Cards:
 
 
 
+#
+# game_deck_1 = Playing_Cards.create_deck()
+#
+# Playing_Cards.print_cards(game_deck_1)
+#
+# shuffled_deck_1 = Playing_Cards.shuffle_cards(game_deck_1)
+#
+# Playing_Cards.print_cards(shuffled_deck_1)
+#
+#
+#
+# game_deck_2 = Playing_Cards.create_deck()
+#
+# Playing_Cards.print_cards(game_deck_2)
+#
+# shuffled_deck_2 = Playing_Cards.shuffle_cards(game_deck_2)
+#
+# Playing_Cards.print_cards(shuffled_deck_2)
 
-# game_deck = Playing_Cards.create_deck()
+
+
+
 #
-# Playing_Cards.print_deck(game_deck)
-#
-# shuffled_deck = Playing_Cards.shuffle_cards(game_deck)
-#
-# Playing_Cards.print_deck(shuffled_deck)
-#
-# card = Playing_Cards.draw_card(shuffled_deck)
-#
+# card = Playing_Cards.draw_card(shuffled_deck_1)
+# #
 # print(card)
+# card = Playing_Cards.draw_card(shuffled_deck_1)
+# #
+# print(card)
+# card = Playing_Cards.draw_card(shuffled_deck_1)
+# #
+# print(card)
+# card = Playing_Cards.draw_card(shuffled_deck_1)
+# #
+# print(card)
+# Playing_Cards.print_cards(shuffled_deck_1)
+
+
 # Playing_Cards.print_deck(shuffled_deck)
 #
 # Playing_Cards.discard(shuffled_deck)
